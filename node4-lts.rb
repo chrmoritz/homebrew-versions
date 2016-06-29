@@ -1,8 +1,8 @@
 class Node4Lts < Formula
   desc "JavaScript runtime built on Chrome's V8 engine"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v4.4.6/node-v4.4.6.tar.xz"
-  sha256 "0f6bbfbea525469c91932b1aac35e0810e6bcda96f1c720e42a433942ee66106"
+  url "https://nodejs.org/dist/v4.4.7/node-v4.4.7.tar.xz"
+  sha256 "1ef900b9cb3ffb617c433a3247a9d67ff36c9455cbc9c34175bee24bdbfdf731"
   head "https://github.com/nodejs/node.git", :branch => "v4.x-staging"
 
   bottle do
@@ -26,11 +26,9 @@ class Node4Lts < Formula
     build 2326
   end
 
-  # Use npm 2.15.4 for now, because there are issues with the registry tarball
-  # of npm 2.15.5: https://github.com/Homebrew/homebrew-versions/pull/1269
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-2.15.4.tgz"
-    sha256 "0bf2d52cf6544020b8e9f5f9671b7ea4ee9aca3af5e93b58befdd54fe402493c"
+    url "https://registry.npmjs.org/npm/-/npm-2.15.8.tgz"
+    sha256 "c9a54f5a7f86a89a77c1c26511bcf3bb55dc7ce5283b590ab1ba289f3824b400"
   end
 
   resource "icu4c" do
